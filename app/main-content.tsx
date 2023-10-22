@@ -118,7 +118,7 @@ const MainContent = () => {
         </div>
       </div>
 
-      <div className="w-full">
+      <div className="w-full pb-[16.4rem]">
         <p className="mb-10 text-[#060606] text-xl">Dashboard Overview</p>
 
         <div className="flex gap-4 w-full">
