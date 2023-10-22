@@ -1,4 +1,4 @@
-"use-client";
+"use client";
 
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
@@ -9,8 +9,77 @@ import RetailerIcon from "./icons/retailer-icon";
 import ViewRedempIcon from "./icons/view-redemp-icon";
 import CalendarIcon from "./icons/calendar-icon";
 import CaretDown from "./icons/caret-down";
+import { Line } from "react-chartjs-2";
+import {
+  Chart as ChartJS,
+  LineElement,
+  CategoryScale,
+  LinearScale,
+  PointElement,
+} from "chart.js";
+
+ChartJS.register(LineElement, CategoryScale, LinearScale, PointElement);
 
 const MainContent = () => {
+  const data = {
+    labels: [
+      "Oct 3",
+      "Oct 6",
+      "Oct 9",
+      "Oct 12",
+      "Oct 15",
+      "Oct 18",
+      "Oct 21",
+      "Oct 24",
+      "Oct 27",
+    ],
+    datasets: [
+      {
+        labels: "",
+        data: [0, null, null, 3, null, null, 5, null, 1],
+        backgroundColor: "#1FAD32",
+        borderColor: "#1FAD32",
+        pointBorderColor: "#1FAD32",
+        borderWidth: 1,
+        fill: true,
+        spanGaps: true,
+        segment: {
+          backgroundColor: "#1FAD32",
+        },
+      },
+    ],
+  };
+
+  const options = {
+    // layout: {
+    //   padding: {
+    //     top: 2,
+    //   },
+    // },
+    maintainAspectRatio: false,
+    scales: {
+      x: {
+        grid: {
+          display: false,
+        },
+        border: {
+          display: false,
+        },
+      },
+      y: {
+        border: {
+          display: false,
+        },
+        min: 0,
+        max: 6,
+        ticks: {
+          display: false,
+          stepSize: 0.5,
+        },
+      },
+    },
+  };
+
   return (
     <section className="px-10">
       <div className="flex justify-between items-center py-6">
@@ -56,7 +125,7 @@ const MainContent = () => {
         <p className="mb-10 text-[#060606] text-xl">Dashboard Overview</p>
 
         <div className="p-10 border-[#E6E6E6] border-[1.215px] rounded-[9.717px] shadow-[0px_0px_29.15122px_0px_rgba(235,235,235,0.25)]">
-          <div className="flex justify-between items-start border-b-[#E6E6E6] border-b-[1.215px] pb-6">
+          <div className="flex justify-between items-start border-b-[#E6E6E6] border-b-[1.215px] pb-6 mb-16">
             <div className="flex flex-col gap-6">
               <p className="text-lg text-[#666666] font-medium">
                 Vouchers Issued
@@ -68,6 +137,9 @@ const MainContent = () => {
               <p className="text-[#101010] font-bold text-sm">Last 30 Days</p>
               <CaretDown />
             </div>
+          </div>
+          <div className="h-[233px]">
+            <Line data={data} options={options}></Line>
           </div>
         </div>
       </div>
