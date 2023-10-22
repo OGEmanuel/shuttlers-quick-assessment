@@ -64,8 +64,8 @@ const MainContent = () => {
         border: {
           display: false,
         },
-        min: 0,
-        max: 3,
+        // min: 0,
+        // max: 3,
         ticks: {
           display: false,
           stepSize: 0.5,
