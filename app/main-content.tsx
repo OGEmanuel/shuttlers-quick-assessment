@@ -76,59 +76,67 @@ const MainContent = () => {
   };
 
   return (
-    <section className="px-10">
+    <section className="md:px-10 px-5 w-full col-start-2 overflow-x-hidden max-w-[40rem] mx-auto md:max-w-none lg:max-w-[60rem] xl:max-w-none">
       <div className="flex justify-between items-center py-6">
-        <div>
+        <div className="md:block flex flex-col">
           <p className="text-[#7B7B7B] text-xs">3rd October, 2023</p>
-          <h1 className="text-2xl text-[#0A0A0A]">Welcome, Akachukwu!</h1>
+          <h1 className="md:text-2xl text-lg text-[#0A0A0A]">
+            Welcome, Akachukwu!
+          </h1>
         </div>
-        <div className="flex gap-7">
-          <Button className="bg-white text-[#060606] hover:bg-[#F4F4F4] hover:border-transparent gap-2 border border-[#EBEBEB] rounded-3xl shadow-[0px_0px_32px_0px_rgba(204,204,204,0.25)]">
+        <div className="flex gap-2 md:gap-7">
+          <Button className="bg-white text-xs md:text-[0.95rem] text-[#060606] hover:bg-[#F4F4F4] hover:border-transparent gap-2 border border-[#EBEBEB] rounded-full md:rounded-3xl shadow-[0px_0px_32px_0px_rgba(204,204,204,0.25)]">
             <AddIcon />
-            <p>Create New</p>
+            <p className="hidden md:block">Create New</p>
           </Button>
           <Avatar>
             <AvatarImage src="" />
-            <AvatarFallback className="bg-[#F4F4F4]">AK</AvatarFallback>
+            <AvatarFallback className="bg-[#F4F4F4] text-xs md:text-[0.95rem] text-[#101723]">
+              AK
+            </AvatarFallback>
           </Avatar>
         </div>
       </div>
-      <div className="pt-10 w-full mb-16">
-        <p className="text-xl mb-8 text-[#060606]">Quick Actions</p>
+      <div className="md:pt-10 pt-5 w-full mb-10 md:mb-16">
+        <p className="md:text-xl text-lg md:mb-8 mb-5 text-[#060606]">
+          Quick Actions
+        </p>
 
-        <div className="flex gap-3 w-full text-[#0A0A0A]">
+        <div className="flex gap-3 w-full text-[#0A0A0A] flex-wrap">
           <div className="flex items-center w-full gap-4 border border-[#EBEBEB] py-4 px-4 shadow-[0px_0px_8px_0px_rgba(224,224,224,0.25)] rounded-[15px]">
             <IssueIcon />
-            <p className="text-[0.94rem]">Issue a New Voucher</p>
+            <p className="md:text-[0.94rem] text-sm">Issue a New Voucher</p>
           </div>
-          <div className="flex items-center w-full gap-4 border border-[#EBEBEB] py-4 px-4 shadow-[0px_0px_8px_0px_rgba(224,224,224,0.25)] rounded-[15px]">
+          <div className="flex items-center w-full md:gap-4 gap-5 border border-[#EBEBEB] py-4 px-[1.65rem] md:px-4 shadow-[0px_0px_8px_0px_rgba(224,224,224,0.25)] rounded-[15px]">
             <BranchIcon />
             <p className="text-[0.94rem]">Add a New Branch</p>
           </div>
-          <div className="flex items-center w-full gap-4 border border-[#EBEBEB] py-4 px-4 shadow-[0px_0px_8px_0px_rgba(224,224,224,0.25)] rounded-[15px]">
+          <div className="flex items-center w-full gap-4 border border-[#EBEBEB] py-4 px-[1.6rem] md:px-4 shadow-[0px_0px_8px_0px_rgba(224,224,224,0.25)] rounded-[15px]">
             <RetailerIcon />
             <p className="text-[0.94rem]">Add a Retailer</p>
           </div>
-          <div className="flex items-center w-full gap-4 border border-[#EBEBEB] py-4 px-4 shadow-[0px_0px_8px_0px_rgba(224,224,224,0.25)] rounded-[15px]">
+          <div className="flex items-center w-full gap-4 border border-[#EBEBEB] py-4 md:px-4 px-[1.65rem] shadow-[0px_0px_8px_0px_rgba(224,224,224,0.25)] rounded-[15px]">
             <ViewRedempIcon />
             <p className="text-[0.94rem]">View Redemption History</p>
           </div>
         </div>
       </div>
 
-      <div className="w-full pb-[16.4rem]">
-        <p className="mb-10 text-[#060606] text-xl">Dashboard Overview</p>
+      <div className="w-full pb-40 md:pb-[16.4rem]">
+        <p className="md:mb-10 mb-5 text-[#060606] text-xl">
+          Dashboard Overview
+        </p>
 
-        <div className="flex gap-4 w-full">
-          <div className="p-10 border-[#E6E6E6] border-[1.215px] rounded-[9.717px] shadow-[0px_0px_29.15122px_0px_rgba(235,235,235,0.25)] w-full">
+        <div className="flex flex-wrap gap-4 w-full">
+          <div className="md:p-10 p-5 border-[#E6E6E6] border-[1.215px] rounded-[9.717px] shadow-[0px_0px_29.15122px_0px_rgba(235,235,235,0.25)] w-full">
             <div className="flex justify-between items-start border-b-[#E6E6E6] border-b-[1.215px] pb-6 mb-16">
-              <div className="flex flex-col gap-6">
-                <p className="text-lg text-[#666666] font-medium">
+              <div className="flex flex-col gap-3 md:gap-6">
+                <p className="md:text-lg text-base text-[#666666] font-medium">
                   Vouchers Issued
                 </p>
-                <p className="font-bold text-[2rem]">192</p>
+                <p className="font-bold text-lg md:text-[2rem]">192</p>
               </div>
-              <div className="flex items-center gap-3 px-4 py-[0.85rem] border-[1.767px] border-[#E8E8E8] rounded-[16.154px] cursor-pointer hover:bg-[#F4F4F4]">
+              <div className="flex items-center md:gap-3 gap-2 md:px-4 px-2 py-[0.85rem] border-[1.767px] border-[#E8E8E8] rounded-[16.154px] cursor-pointer hover:bg-[#F4F4F4]">
                 <CalendarIcon />
                 <p className="text-[#101010] font-bold text-sm">Last 30 Days</p>
                 <CaretDown />
@@ -139,15 +147,15 @@ const MainContent = () => {
             </div>
           </div>
 
-          <div className="p-10 border-[#E6E6E6] border-[1.215px] rounded-[9.717px] shadow-[0px_0px_29.15122px_0px_rgba(235,235,235,0.25)] w-full">
+          <div className="md:p-10 p-5 border-[#E6E6E6] border-[1.215px] rounded-[9.717px] shadow-[0px_0px_29.15122px_0px_rgba(235,235,235,0.25)] w-full">
             <div className="flex justify-between items-start border-b-[#E6E6E6] border-b-[1.215px] pb-6 mb-16">
-              <div className="flex flex-col gap-6">
-                <p className="text-lg text-[#666666] font-medium">
+              <div className="flex flex-col gap-3 md:gap-6">
+                <p className="md:text-lg text-base text-[#666666] font-medium">
                   Vouchers Issued
                 </p>
-                <p className="font-bold text-[2rem]">200</p>
+                <p className="font-bold text-lg md:text-[2rem]">200</p>
               </div>
-              <div className="flex items-center gap-3 px-4 py-[0.85rem] border-[1.767px] border-[#E8E8E8] rounded-[16.154px] cursor-pointer hover:bg-[#F4F4F4]">
+              <div className="flex items-center md:gap-3 gap-2 md:px-4 px-2 py-[0.85rem] border-[1.767px] border-[#E8E8E8] rounded-[16.154px] cursor-pointer hover:bg-[#F4F4F4]">
                 <CalendarIcon />
                 <p className="text-[#101010] font-bold text-sm">Last 30 Days</p>
                 <CaretDown />

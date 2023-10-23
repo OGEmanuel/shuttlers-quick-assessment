@@ -14,7 +14,7 @@ import SettingIcon from "./icons/setting-icon";
 
 const Sidebar = () => {
   return (
-    <nav className="px-4 py-7 border-r border-[#EBEBEB] min-h-screen">
+    <nav className="px-4 py-7 border-r border-[#EBEBEB] hidden xl:block h-screen scroll fixed overflow-auto">
       <div className="flex gap-2 mb-10">
         <Image src={logo} priority alt="logo" />
         <p className="text-[0.94rem] font-medium text-[#0A0A0A]">Vouchers</p>
