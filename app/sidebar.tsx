@@ -11,10 +11,16 @@ import PayoutIcon from "./icons/payout-icon";
 import RedempIcon from "./icons/redemp-icon";
 import ReportIcon from "./icons/report-icon";
 import SettingIcon from "./icons/setting-icon";
+import { dataPropsType } from "./data-types";
 
-const Sidebar = () => {
+const Sidebar = (props: dataPropsType) => {
+  const { open } = props;
   return (
-    <nav className="px-4 py-7 border-r border-[#EBEBEB] hidden xl:block h-screen scroll fixed overflow-auto">
+    <nav
+      className={`px-4 py-7 border-r md:w-[25%] xl:w-[23%] border-[#EBEBEB] md:block ${
+        open ? "block bg-white" : "hidden"
+      } h-screen scroll fixed overflow-auto`}
+    >
       <div className="flex gap-2 mb-10">
         <Image src={logo} priority alt="logo" />
         <p className="text-[0.94rem] font-medium text-[#0A0A0A]">Vouchers</p>
