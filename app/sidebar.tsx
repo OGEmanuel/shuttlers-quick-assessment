@@ -40,8 +40,8 @@ const Sidebar = (props: dataPropsType) => {
         <p className="text-sm font-medium">Home</p>
       </div>
 
-      <div className="text-[0.875rem] font-medium text-[#565656] mb-5 text-[#060606]">
-        <p className="text-[0.85rem] ml-5 mb-5 text-black">Manage</p>
+      <div className="text-[0.875rem] font-medium text-[#565656] mb-5">
+        <p className="text-[0.85rem] ml-5 mb-5 text-[#060606]">Manage</p>
 
         <div className="flex flex-col ml-1">
           <div className="flex items-center gap-4 py-2.5 px-5 hover:bg-[#F7F7F7] hover:rounded-xl cursor-pointer">
