@@ -7,9 +7,6 @@ import IssueIcon from "./icons/issue-icon";
 import BranchIcon from "./icons/branch-icon";
 import RetailerIcon from "./icons/retailer-icon";
 import ViewRedempIcon from "./icons/view-redemp-icon";
-import CalendarIcon from "./icons/calendar-icon";
-import CaretDown from "./icons/caret-down";
-import { Line } from "react-chartjs-2";
 import {
   Chart as ChartJS,
   LineElement,
@@ -91,44 +88,6 @@ const MainContent = (props: dataPropsType) => {
         <div className="flex flex-wrap xl:flex-nowrap gap-4 w-full">
           <Chart vouchers={192} />
           <Chart vouchers={200} />
-
-          {/* <div className="md:p-10 p-5 border-[#E6E6E6] border-[1.215px] rounded-[9.717px] shadow-[0px_0px_29.15122px_0px_rgba(235,235,235,0.25)] w-full">
-            <div className="flex justify-between items-start border-b-[#E6E6E6] border-b-[1.215px] pb-6 mb-16">
-              <div className="flex flex-col gap-3 md:gap-6">
-                <p className="md:text-lg text-base text-[#666666] font-medium">
-                  Vouchers Issued
-                </p>
-                <p className="font-bold text-lg md:text-[2rem]">192</p>
-              </div>
-              <div className="flex items-center md:gap-3 gap-2 md:px-4 px-2 py-[0.85rem] border-[1.767px] border-[#E8E8E8] rounded-[16.154px] cursor-pointer hover:bg-[#F4F4F4]">
-                <CalendarIcon />
-                <p className="text-[#101010] font-bold text-sm">Last 30 Days</p>
-                <CaretDown />
-              </div>
-            </div>
-            <div className="h-[233px]">
-              <Line data={data} options={options}></Line>
-            </div>
-          </div> */}
-
-          {/* <div className="md:p-10 p-5 border-[#E6E6E6] border-[1.215px] rounded-[9.717px] shadow-[0px_0px_29.15122px_0px_rgba(235,235,235,0.25)] w-full">
-            <div className="flex justify-between items-start border-b-[#E6E6E6] border-b-[1.215px] pb-6 mb-16">
-              <div className="flex flex-col gap-3 md:gap-6">
-                <p className="md:text-lg text-base text-[#666666] font-medium">
-                  Vouchers Issued
-                </p>
-                <p className="font-bold text-lg md:text-[2rem]">200</p>
-              </div>
-              <div className="flex items-center md:gap-3 gap-2 md:px-4 px-2 py-[0.85rem] border-[1.767px] border-[#E8E8E8] rounded-[16.154px] cursor-pointer hover:bg-[#F4F4F4]">
-                <CalendarIcon />
-                <p className="text-[#101010] font-bold text-sm">Last 30 Days</p>
-                <CaretDown />
-              </div>
-            </div>
-            <div className="h-[233px]">
-              <Line data={data} options={options}></Line>
-            </div>
-          </div> */}
         </div>
       </div>
     </section>
